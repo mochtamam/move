@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOVE - Solusi Perabotan Air Berkualitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+
+      :root {
+        --primary-red: #a52a2a;
+        --secondary-brown: #8b4513;
+        --accent-gold: #d4af37;
+        --dark-brown: #5c4033;
+        --light-cream: #f5f5dc;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--light-cream);
+        color: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          var(--primary-red) 0%,
+          var(--secondary-brown) 100%
+        );
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(165, 42, 42, 0.2);
+      }
+
+      .water-animation {
+        animation: waterFlow 8s ease-in-out infinite;
+      }
+
+      @keyframes waterFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .nav-link::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--accent-gold);
+        transition: width 0.3s;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="gradient-bg text-white sticky top-0 z-50 shadow-md">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <img src="logo.png" alt="Logo" class="mr-3 w-20" />
+            <h1 class="text-2xl font-bold">MOVE</h1>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
+              >Beranda</a
+            >
+            <a
+              href="#products"
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
+              >Produk</a
+            >
+            <a
+              href="#about"
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
+              >Tentang</a
+            >
+            <a
+              href="#testimonial"
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
+              >Testimoni</a
+            >
+            <a
+              href="#contact"
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
+              >Kontak</a
+            >
+          </nav>
+          <button class="md:hidden focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="gradient-bg text-white pt-20 pb-32 relative overflow-hidden"
+    >
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Solusi Air Berkualitas untuk Rumah Anda
+          </h1>
+          <p class="text-lg mb-8 opacity-90">
+            PT. MITRA OPTIMA VALVE menghadirkan perabotan air premium dengan
+            desain elegan dan fungsi unggul untuk pengalaman air terbaik di
+            rumah Anda.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#products"
+              class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300"
+              >Lihat Produk</a
+            >
+            <a
+              href="#contact"
+              class="border-2 border-white hover:bg-white hover:text-brown-800 px-6 py-3 rounded-lg font-medium transition duration-300"
+              >Hubungi Kami</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 relative">
+          <div
+            class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-2xl"
+          >
+            <img
+              src="content black.png"
+              alt="Display produk MOVE yang menunjukkan kran air modern dengan finishing chrome dan kayu, latar belakang marmer"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div
+            class="absolute -bottom-8 -right-8 w-32 h-32 bg-yellow-500 rounded-full opacity-20 filter blur-xl"
+          ></div>
+        </div>
+      </div>
+      <div
+        class="water-wave absolute bottom-0 left-0 w-full h-24 bg-blue-100 bg-opacity-30"
+      ></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-brown-800 mb-4">
+            Mengapa Memilih MOVE?
+          </h2>
+          <div class="w-24 h-1 bg-yellow-600 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="feature-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                class="w-8 h-8 text-red-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-3">
+              Teknologi Hemat Air
+            </h3>
+            <p class="text-gray-600 text-center">
+              Produk kami dirancang untuk mengoptimalkan aliran air tanpa
+              pemborosan, mengurangi penggunaan air hingga 30%.
+            </p>
+          </div>
+
+          <div
+            class="feature-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-brown-100 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                class="w-8 h-8 text-brown-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-3">
+              Material Berkualitas
+            </h3>
+            <p class="text-gray-600 text-center">
+              Menggunakan bahan premium tahan karat dan ramah lingkungan untuk
+              ketahanan jangka panjang.
+            </p>
+          </div>
+
+          <div
+            class="feature-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                class="w-8 h-8 text-yellow-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-3">
+              Garansi 5 Tahun
+            </h3>
+            <p class="text-gray-600 text-center">
+              Kami memberikan garansi ekstensif sebagai bukti kepercayaan pada
+              kualitas produk kami.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-brown-800 mb-4">Produk Kami</h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Temukan koleksi lengkap perabotan air berkualitas tinggi untuk
+            kebutuhan rumah Anda
+          </p>
+          <div class="w-24 h-1 bg-yellow-600 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Product Categories -->
+        <div class="flex justify-center mb-12">
+          <div class="flex space-x-2 overflow-x-auto pb-2">
+            <button
+              class="category-btn px-4 py-2 bg-red-700 text-white rounded-lg"
+            >
+              Semua
+            </button>
+            <button
+              class="category-btn px-4 py-2 bg-white text-brown-800 hover:bg-red-100 rounded-lg transition duration-300"
+            >
+              Kran Air
+            </button>
+            <button
+              class="category-btn px-4 py-2 bg-white text-brown-800 hover:bg-red-100 rounded-lg transition duration-300"
+            >
+              Shower
+            </button>
+            <button
+              class="category-btn px-4 py-2 bg-white text-brown-800 hover:bg-red-100 rounded-lg transition duration-300"
+            >
+              Aksesoris
+            </button>
+            <button
+              class="category-btn px-4 py-2 bg-white text-brown-800 hover:bg-red-100 rounded-lg transition duration-300"
+            >
+              Perlengkapan
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Product 1 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="content chrome.png"
+                alt="Kran air modern dengan desain minimalis, gagang kayu dan bagian chrome, di atas wastafel marmer"
+                class="w-full h-64 object-cover"
+              />
+              <span
+                class="absolute top-4 right-4 bg-red-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >Bestseller</span
+              >
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Kran Marquis</h3>
+              <p class="text-gray-600 mb-4">
+                Kran air berkualitas tinggi dengan teknologi sensor untuk
+                pengalaman tanpa sentuh.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-lg font-bold text-brown-800"
+                  >Rp1.850.000</span
+                >
+                <button
+                  class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="content black.png"
+                alt="Set shower mewah dengan panel kontrol digital dan kepala shower besar dalam setting kamar mandi modern"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Rainfall Shower Elite</h3>
+              <p class="text-gray-600 mb-4">
+                Shower hujan dengan berbagai pengaturan tekanan dan suhu untuk
+                spa di rumah Anda.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-lg font-bold text-brown-800"
+                  >Rp3.250.000</span
+                >
+                <button
+                  class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="content chrome.png"
+                alt="Set kran dapur panjang dengan sprayer pull-out dan finishing tembaga di lingkungan dapur modern"
+                class="w-full h-64 object-cover"
+              />
+              <span
+                class="absolute top-4 right-4 bg-red-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >New</span
+              >
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Watermaster Kitchen Set
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Kran dapur lengkap dengan sprayer pull-out untuk berbagai
+                kebutuhan memasak.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-lg font-bold text-brown-800"
+                  >Rp2.750.000</span
+                >
+                <button
+                  class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition duration-300"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <button
+            class="border-2 border-red-700 text-red-700 hover:bg-red-700 hover:text-white px-6 py-3 rounded-lg font-medium transition duration-300"
+          >
+            Lihat Semua Produk
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+            <img
+              src="content black.png"
+              alt="Tim MOVE di ruang pamer produk, tersenyum dengan latar belakang instalasi produk air modern"
+              class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-brown-800 mb-6">Tentang MOVE</h2>
+            <div class="w-24 h-1 bg-yellow-600 mb-6"></div>
+            <p class="text-lg text-gray-600 mb-4">
+              Didirikan pada tahun 2010, MOVE telah menjadi pelopor dalam
+              industri perabotan rumah dengan fokus pada produk-produk air
+              berkualitas tinggi.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              Kami menggabungkan teknologi mutakhir dengan desain estetika untuk
+              menciptakan produk yang tidak hanya fungsional tetapi juga
+              memperindah ruang hidup Anda.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <svg
+                    class="w-5 h-5 text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Bahan Berkualitas</span>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-brown-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <svg
+                    class="w-5 h-5 text-brown-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Desain Inovatif</span>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <svg
+                    class="w-5 h-5 text-yellow-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Teknologi Modern</span>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <svg
+                    class="w-5 h-5 text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700">Ramah Lingkungan</span>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="inline-block bg-brown-800 hover:bg-brown-900 text-white px-6 py-3 rounded-lg font-medium transition duration-300"
+              >Baca Selengkapnya</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-brown-800 mb-4">
+            Apa Kata Pelanggan?
+          </h2>
+          <div class="w-24 h-1 bg-yellow-600 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img
+                src="avatar5.png"
+                alt="Foto Bapak Anwar, pengguna produk MOVE"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Bapak Anwar</h4>
+                <p class="text-gray-500 text-sm">Pemilik Rumah di Bandung</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Kualitas kran MOVE sangat memuaskan. Sudah 3 tahun tidak ada
+              masalah sama sekali. Desainnya juga membuat kamar mandi saya
+              terlihat lebih mewah."
+            </p>
+            <div class="flex mt-4">
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img
+                src="avatar3.png"
+                alt="Foto Bu Dewi, pengguna produk shower MOVE"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Bu Dewi</h4>
+                <p class="text-gray-500 text-sm">Kontraktor Interior</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Saya sering menggunakan produk MOVE untuk proyek klien saya
+              karena konsistensi kualitas dan variasi desain yang sesuai dengan
+              berbagai konsep interior."
+            </p>
+            <div class="flex mt-4">
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-200"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img
+                src="avatar5.png"
+                alt="Foto Pak Andi, pengguna produk MOVE selama 5 tahun"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Pak Andi</h4>
+                <p class="text-gray-500 text-sm">Pemilik Vila di Puncak</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Setelah 5 tahun menggunakan produk MOVE di properti saya, saya
+              bisa mengatakan ini adalah salah satu investasi terbaik untuk
+              kenyamanan rumah."
+            </p>
+            <div class="flex mt-4">
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 gradient-bg text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Siap Mengubah Pengalaman Air di Rumah Anda?
+        </h2>
+        <p class="text-lg mb-8 max-w-3xl mx-auto">
+          Temukan produk tepat untuk kebutuhan rumah Anda dengan konsultasi
+          gratis dari tim ahli kami.
+        </p>
+        <a
+          href="#contact"
+          class="inline-block bg-yellow-600 text-brown-800 hover:bg-yellow-700 px-8 py-3 rounded-lg font-medium shadow-lg transition duration-300"
+          >Hubungi Kami Sekarang</a
+        >
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+            <h2 class="text-3xl font-bold text-brown-800 mb-6">Hubungi Kami</h2>
+            <div class="w-24 h-1 bg-yellow-600 mb-6"></div>
+
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4">Informasi Kontak</h3>
+              <div class="flex items-start mb-3">
+                <svg
+                  class="w-6 h-6 text-red-700 mr-3 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <div>
+                  <p class="font-medium">Alamat Kantor</p>
+                  <p class="text-gray-600">
+                    Jl. Sidotopo Kidul No.51, Sidotopo, Kec. Semampir, Surabaya,
+                    Jawa Timur 60152
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start mb-3">
+                <svg
+                  class="w-6 h-6 text-red-700 mr-3 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <div>
+                  <p class="font-medium">Telepon</p>
+                  <p class="text-gray-600">+62 81332968997</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
