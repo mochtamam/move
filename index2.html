@@ -3,172 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOVE | Surabaya</title>
+    <title>MOVE - Solusi Perabotan Air Berkualitas</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Martel:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+
       :root {
-        --primary-deep: #801818;
-        --primary-light: #b73e3e;
-        --secondary-warm: #a05c2c;
-        --secondary-dark: #5e3a21;
-        --accent-gold: #d4b483;
-        --neutral-light: #faf7f2;
-        --neutral-dark: #2a2a2a;
+        --primary-red: #a52a2a;
+        --secondary-brown: #8b4513;
+        --accent-gold: #d4af37;
+        --dark-brown: #5c4033;
+        --light-cream: #f5f5dc;
       }
 
       body {
-        font-family: "Manrope", sans-serif;
-        background-color: var(--neutral-light);
-        color: var(--neutral-dark);
-        scroll-behavior: smooth;
+        font-family: "Poppins", sans-serif;
+        background-color: var(--light-cream);
+        color: #333;
       }
 
       h1,
       h2,
-      h3,
-      h4 {
-        font-family: "Martel", serif;
-        font-weight: 700;
+      h3 {
+        font-family: "Playfair Display", serif;
       }
 
-      .glass-morphism {
-        background: rgba(255, 255, 255, 0.18);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-      }
-
-      .gradient-text {
+      .gradient-bg {
         background: linear-gradient(
-          90deg,
-          var(--primary-deep) 0%,
-          var(--secondary-warm) 100%
+          135deg,
+          var(--primary-red) 0%,
+          var(--secondary-brown) 100%
         );
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
       }
 
       .product-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(128, 24, 24, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(165, 42, 42, 0.2);
       }
 
-      .water-drop {
-        position: relative;
+      .water-animation {
+        animation: waterFlow 8s ease-in-out infinite;
       }
 
-      .water-drop::after {
+      @keyframes waterFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .nav-link::after {
         content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        height: 3px;
-        background: linear-gradient(
-          90deg,
-          transparent 0%,
-          var(--accent-gold) 50%,
-          transparent 100%
-        );
-      }
-
-      .scroll-reveal {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease-out;
-      }
-
-      .scroll-reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .nav-link::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        display: block;
         width: 0;
         height: 2px;
         background: var(--accent-gold);
-        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: width 0.3s;
       }
 
-      .nav-link:hover::before {
+      .nav-link:hover::after {
         width: 100%;
       }
-
-      /* Fluid animation */
-      @keyframes fluidMotion {
-        0% {
-          border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-        }
-        50% {
-          border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-        }
-        100% {
-          border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-        }
-      }
-
-      /* 3D effect */
-      .card-3d {
-        transform-style: preserve-3d;
-        transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      }
-
-      .card-3d:hover {
-        transform: rotateY(10deg) rotateX(5deg) scale(1.03);
-      }
     </style>
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobile-menu");
-        menu.classList.toggle("hidden");
-      }
-    </script>
   </head>
-  <body class="antialiased">
-    <header class="fixed w-full z-50 top-4">
-      <div class="container mx-auto px-6">
-        <div
-          class="glass-morphism max-w-7xl mx-auto rounded-full shadow-lg py-3 px-6 flex justify-between items-center"
-        >
+  <body class="text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="gradient-bg text-white sticky top-0 z-50 shadow-md">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
           <div class="flex items-center">
             <img src="logo.png" alt="Logo" class="mr-3 w-20" />
-            <h1 class="text-xl font-bold">
-              MOVE <span class="text-xs font-light ml-1">2025</span>
-            </h1>
+            <h1 class="text-2xl font-bold">MOVE</h1>
           </div>
           <nav class="hidden md:flex space-x-8">
             <a
               href="#home"
-              class="text-gray-700 hover:text-gray-900 transition duration-300"
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
               >Beranda</a
             >
             <a
               href="#products"
-              class="text-gray-700 hover:text-gray-900 transition duration-300"
-              >Product</a
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
+              >Produk</a
             >
             <a
               href="#about"
-              class="text-gray-700 hover:text-gray-900 transition duration-300"
-              >About</a
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
+              >Tentang</a
+            >
+            <a
+              href="#testimonial"
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
+              >Testimoni</a
             >
             <a
               href="#contact"
-              class="text-gray-700 hover:text-gray-900 transition duration-300"
+              class="nav-link py-2 px-1 text-white hover:text-yellow-200 transition duration-300"
               >Kontak</a
             >
           </nav>
-          <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+          <button class="md:hidden focus:outline-none">
             <svg
               class="w-6 h-6"
               fill="none"
@@ -186,41 +125,12 @@
           </button>
         </div>
       </div>
-
-      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
-        <nav class="flex flex-col space-y-2 p-4">
-          <a
-            href="#home"
-            class="text-gray-700 hover:text-gray-900 transition duration-300"
-            >Beranda</a
-          >
-          <a
-            href="#products"
-            class="text-gray-700 hover:text-gray-900 transition duration-300"
-            >Koleksi</a
-          >
-          <a
-            href="#technology"
-            class="text-gray-700 hover:text-gray-900 transition duration-300"
-            >Teknologi</a
-          >
-          <a
-            href="#about"
-            class="text-gray-700 hover:text-gray-900 transition duration-300"
-            >Brand</a
-          >
-          <a
-            href="#contact"
-            class="text-gray-700 hover:text-gray-900 transition duration-300"
-            >Kontak</a
-          >
-        </nav>
-      </div>
     </header>
 
+    <!-- Hero Section -->
     <section
       id="home"
-      class="gradient-bg text-grey pt-20 pb-32 top-10 relative overflow-hidden"
+      class="gradient-bg text-white pt-20 pb-32 relative overflow-hidden"
     >
       <div
         class="container mx-auto px-6 flex flex-col md:flex-row items-center"
@@ -230,30 +140,30 @@
             Solusi Air Berkualitas untuk Rumah Anda
           </h1>
           <p class="text-lg mb-8 opacity-90">
-            <b>PT. Mitra Optima Valve</b> menghadirkan perabotan air premium
-            dengan desain elegan dan fungsi unggul untuk pengalaman air terbaik
-            di rumah Anda.
+            PT. MITRA OPTIMA VALVE menghadirkan perabotan air premium dengan
+            desain elegan dan fungsi unggul untuk pengalaman air terbaik di
+            rumah Anda.
           </p>
           <div class="flex space-x-4">
             <a
               href="#products"
-              class="bg-yellow-600 hover:bg-yellow-700 text-grey px-6 py-3 rounded-lg font-medium transition duration-300"
+              class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300"
               >Lihat Produk</a
             >
             <a
               href="#contact"
-              class="border-2 border-grey hover:bg-grey hover:text-brown-800 px-6 py-3 rounded-lg font-medium transition duration-300"
+              class="border-2 border-white hover:bg-white hover:text-brown-800 px-6 py-3 rounded-lg font-medium transition duration-300"
               >Hubungi Kami</a
             >
           </div>
         </div>
         <div class="md:w-1/2 relative">
           <div
-            class="bg-grey bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-2xl"
+            class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-2xl"
           >
             <img
-              src="content chrome.png"
-              alt="Banner"
+              src="content black.png"
+              alt="Display produk MOVE yang menunjukkan kran air modern dengan finishing chrome dan kayu, latar belakang marmer"
               class="rounded-lg w-full"
             />
           </div>
@@ -267,6 +177,7 @@
       ></div>
     </section>
 
+    <!-- Features Section -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
@@ -370,6 +281,7 @@
       </div>
     </section>
 
+    <!-- Products Section -->
     <section id="products" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
@@ -381,6 +293,7 @@
           <div class="w-24 h-1 bg-yellow-600 mx-auto mt-4"></div>
         </div>
 
+        <!-- Product Categories -->
         <div class="flex justify-center mb-12">
           <div class="flex space-x-2 overflow-x-auto pb-2">
             <button
@@ -411,20 +324,22 @@
           </div>
         </div>
 
+        <!-- Product Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Product 1 -->
           <div
             class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl"
           >
             <div class="relative overflow-hidden">
-              <span
-                class="absolute top-4 left-4 bg-red-700 text-white px-3 py-1 rounded-full text-sm font-medium"
-                >Bestseller</span
-              >
               <img
                 src="content chrome.png"
-                alt="Product"
+                alt="Kran air modern dengan desain minimalis, gagang kayu dan bagian chrome, di atas wastafel marmer"
                 class="w-full h-64 object-cover"
               />
+              <span
+                class="absolute top-4 right-4 bg-red-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >Bestseller</span
+              >
             </div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">Kran Marquis</h3>
@@ -436,12 +351,11 @@
                 <span class="text-lg font-bold text-brown-800"
                   >Rp1.850.000</span
                 >
-                <a
-                  href="detail.html"
+                <button
                   class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition duration-300"
                 >
                   Detail
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -453,7 +367,7 @@
             <div class="relative overflow-hidden">
               <img
                 src="content black.png"
-                alt="Product"
+                alt="Set shower mewah dengan panel kontrol digital dan kepala shower besar dalam setting kamar mandi modern"
                 class="w-full h-64 object-cover"
               />
             </div>
@@ -467,12 +381,11 @@
                 <span class="text-lg font-bold text-brown-800"
                   >Rp3.250.000</span
                 >
-                <a
-                  href="detail.html"
+                <button
                   class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition duration-300"
                 >
                   Detail
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -484,11 +397,11 @@
             <div class="relative overflow-hidden">
               <img
                 src="content chrome.png"
-                alt="Product"
+                alt="Set kran dapur panjang dengan sprayer pull-out dan finishing tembaga di lingkungan dapur modern"
                 class="w-full h-64 object-cover"
               />
               <span
-                class="absolute top-4 left-4 bg-red-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+                class="absolute top-4 right-4 bg-red-700 text-white px-3 py-1 rounded-full text-sm font-medium"
                 >New</span
               >
             </div>
@@ -504,12 +417,11 @@
                 <span class="text-lg font-bold text-brown-800"
                   >Rp2.750.000</span
                 >
-                <a
-                  href="detail.html"
+                <button
                   class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition duration-300"
                 >
                   Detail
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -532,7 +444,7 @@
           <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
             <img
               src="content black.png"
-              alt="Product"
+              alt="Tim MOVE di ruang pamer produk, tersenyum dengan latar belakang instalasi produk air modern"
               class="rounded-lg shadow-lg w-full"
             />
           </div>
@@ -660,7 +572,7 @@
             <div class="flex items-center mb-4">
               <img
                 src="avatar5.png"
-                alt="Avatar"
+                alt="Foto Bapak Anwar, pengguna produk MOVE"
                 class="w-12 h-12 rounded-full mr-4"
               />
               <div>
@@ -731,7 +643,7 @@
             <div class="flex items-center mb-4">
               <img
                 src="avatar3.png"
-                alt="Avatar"
+                alt="Foto Bu Dewi, pengguna produk shower MOVE"
                 class="w-12 h-12 rounded-full mr-4"
               />
               <div>
@@ -802,7 +714,7 @@
             <div class="flex items-center mb-4">
               <img
                 src="avatar5.png"
-                alt="Avatar"
+                alt="Foto Pak Andi, pengguna produk MOVE selama 5 tahun"
                 class="w-12 h-12 rounded-full mr-4"
               />
               <div>
@@ -873,7 +785,7 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="py-16 gradient-bg text-grey">
+    <section class="py-16 gradient-bg text-white">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-6">
           Siap Mengubah Pengalaman Air di Rumah Anda?
